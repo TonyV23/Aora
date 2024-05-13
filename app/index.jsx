@@ -1,10 +1,10 @@
 // this is the screen of our home page 
 import { StatusBar } from 'expo-status-bar';
-import { Image, SafeAreaView, ScrollView, Text, View } from 'react-native';
+import { Image, ScrollView, Text, View } from 'react-native';
 import { router, Redirect } from 'expo-router';
-
 import images from "../constants/images"
 import CustomButton from '../components/CustomButton';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function App() {
   return (
