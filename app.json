@@ -20,7 +20,8 @@
       "adaptiveIcon": {
         "foregroundImage": "",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package" : "com.viper23.aora"
     },
     "web": {
       "favicon": "./assets/favicon.png"
