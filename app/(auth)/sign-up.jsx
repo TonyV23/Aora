@@ -28,7 +28,7 @@ const signUp = () => {
           <FormField title="Username" value={form.username} placeholder="Enter your username" handleChangeText={(e) => setForm({ ...form, username: e })} otherStyles="mt-7"/>
           <FormField title="Email" value={form.email} placeholder="Enter your email" handleChangeText={(e) => setForm({ ...form, email: e })} otherStyles="mt-7" keyboardType="email-address" />
           <FormField title="Password" value={form.password} placeholder="Enter your password" handleChangeText={(e) => setForm({ ...form, password: e })} otherStyles="mt-7" />
-          <CustomButton title={"Sing in"} handlePress={submit} containerStyles={"w-full mt-7"} isLoading={isSubmitting} />
+          <CustomButton title={"Sing up"} handlePress={submit} containerStyles={"w-full mt-7"} isLoading={isSubmitting} />
           <View className="justify-center pt-5 flex-row gap-2">
             <Text className="text-lg text-gray-100">Already have an account ?</Text>
             <Link href="/sign-in" className='text-lg font-psemibold text-secondary'>Sing in</Link>
