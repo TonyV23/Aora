@@ -6,6 +6,8 @@ import FormField from '../../components/FormField'
 import CustomButton from '../../components/CustomButton'
 import { Link } from 'expo-router'
 
+import { createUser } from '../../lib/appwrite'
+
 const signUp = () => {
 
   // for new states form field
@@ -17,7 +19,9 @@ const signUp = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const submit = () => { }
+  const submit = () => {
+    createUser()
+  }
 
   return (
     <SafeAreaView className="bg-primary h-full">
@@ -25,7 +29,7 @@ const signUp = () => {
         <View className="w-full justify-center items-center h-full px-4 my-6">
           <Image source={images.logo} resizeMode='contain' className="w-[115px] h-[35px]" />
           <Text className="text-2xl text-white text-semibold mt-10 font-psemibold">Sign up to Aora</Text>
-          <FormField title="Username" value={form.username} placeholder="Enter your username" handleChangeText={(e) => setForm({ ...form, username: e })} otherStyles="mt-7"/>
+          <FormField title="Username" value={form.username} placeholder="Enter your username" handleChangeText={(e) => setForm({ ...form, username: e })} otherStyles="mt-7" />
           <FormField title="Email" value={form.email} placeholder="Enter your email" handleChangeText={(e) => setForm({ ...form, email: e })} otherStyles="mt-7" keyboardType="email-address" />
           <FormField title="Password" value={form.password} placeholder="Enter your password" handleChangeText={(e) => setForm({ ...form, password: e })} otherStyles="mt-7" />
           <CustomButton title={"Sing up"} handlePress={submit} containerStyles={"w-full mt-7"} isLoading={isSubmitting} />
